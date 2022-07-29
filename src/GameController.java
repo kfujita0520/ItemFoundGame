@@ -3,11 +3,11 @@ import java.util.Set;
 
 public class GameController {
 
-    AllRanksItemSets allRankItems;
+    ItemRankConfiguration allRankItems;
     Set<String> inputList;
 
-    public GameController(){
-        allRankItems = new AllRanksItemSets();
+    public GameController(ItemRankConfiguration allRankItems){
+        this.allRankItems = allRankItems;
         inputList = new HashSet<String>();
     }
 
@@ -47,7 +47,7 @@ public class GameController {
 
     public void reshufflePermutationItem() {
         allRankItems.reshuffleAllRankPermutationSet();
-        allRankItems.initiateCombinationPieces();
+        allRankItems.shuffleCombinationPieces();
         inputList.clear();
     }
 }
